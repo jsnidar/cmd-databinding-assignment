@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  odds = []
+  evens = []
+  onIntervalFired = (event) => {
+    if(event %2 === 0)this.evens.push(event)
+    else this.odds.push(event)
+  }
 }
